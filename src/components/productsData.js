@@ -1,3 +1,9 @@
+import star1 from "../assets/icons/star1.svg"
+import star2 from "../assets/icons/star2.svg";
+import star3 from "../assets/icons/star3.svg";
+import star4 from "../assets/icons/star4.svg";
+import  "./products/products.css";
+
 export const PRODUCTDATA = [
   {
     id: 1,
@@ -5,7 +11,7 @@ export const PRODUCTDATA = [
     name: "Vegie Muffen",
     price: "16$",
     desc: "There are many things are needed to start the Fast Food Business.",
-    rating: 4,
+    rating: <img className="stars" src={star1} alt="" />,
   },
   {
     id: 2,
@@ -14,7 +20,7 @@ export const PRODUCTDATA = [
     name: "Salads",
     price: "13$",
     desc: "There are many things are needed to start the Fast Food Business.",
-    rating: 5,
+    rating: <img className="stars" src={star2} alt="" />,
   },
   {
     id: 3,
@@ -22,7 +28,7 @@ export const PRODUCTDATA = [
     name: "Burger",
     price: "10$",
     desc: "There are many things are needed to start the Fast Food Business.",
-    rating: 3,
+    rating: <img className="stars" src={star3} alt="" />,
   },
   {
     id: 4,
@@ -30,7 +36,7 @@ export const PRODUCTDATA = [
     name: "Delmonico Steak dish",
     price: "14$",
     desc: "There are many things are needed to start the Fast Food Business.",
-    rating: 2,
+    rating: <img className="stars" src={star4} alt="" />,
   },
   {
     id: 5,
@@ -38,7 +44,7 @@ export const PRODUCTDATA = [
     name: "Egg Masala",
     price: "16$",
     desc: "There are many things are needed to start the Fast Food Business.",
-    rating: 4,
+    rating: <img className="stars" src={star1} alt="" />,
   },
   {
     id: 6,
@@ -46,6 +52,6 @@ export const PRODUCTDATA = [
     name: "Peach Melba dish",
     price: "9$",
     desc: "There are many things are needed to start the Fast Food Business.",
-    rating: 4,
+    rating: <img className="stars" src={star3} alt="" />,
   },
 ];

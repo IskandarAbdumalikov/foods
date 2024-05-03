@@ -5,7 +5,7 @@ import "./navbar.css";
 import { GiHamburgerMenu } from "react-icons/gi";
 
 const Header = () => {
-  return (
+   return (
     <header>
       <nav className="navbar container">
         <div className="nav__left">
@@ -23,8 +23,10 @@ const Header = () => {
           </ul>
         </div>
         <div className="nav__btns">
-          <button className="nav__btn" style={btnStyles}>Booking now</button>
-          <GiHamburgerMenu className="hamburger"/>
+          <button className="nav__btn" style={btnStyles}>
+            Booking now
+          </button>
+          <GiHamburgerMenu className="hamburger" />
         </div>
       </nav>
     </header>

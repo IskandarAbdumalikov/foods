@@ -1,8 +1,40 @@
 import React from "react";
 import { PRODUCTDATA } from "../productsData";
 import "./products.css";
-import star from "../../assets/images/star.svg";
+import { FaStar } from "react-icons/fa6";
+import { FaRegStar } from "react-icons/fa";
+import { IoStarHalfOutline } from "react-icons/io5";
+
 const Products = () => {
+  // function starCount(num) {
+  //   let n = Math.trunc(num);
+  //   if (num === n) {
+  //     let fillStar = new Array(n).fill();
+  //     let outlineStar = new Array(5 - n).fill(<FaRegStar />);
+  //     return [...fillStar, ...outlineStar].join("");
+  //   } else {
+  //     let fillStar = new Array(n).fill(<FaStar />);
+  //     let outlineStar = new Array(5 - n - 1).fill(
+  //       <FaRegStar />
+  //     );
+  //     return [...fillStar, <IoStarHalfOutline />, ...outlineStar].join("");
+  //   }
+  // }
+  function countStars(count) {
+    let res = "";
+
+    for (let i = 0; i < Math.trunc(count); i++) {
+      res += <FaStar />;
+    }
+    if (count % 1 > 0.4) {
+      res += <FaRegStar/>;
+    }
+    for (let i = Math.round(count); i < 5; i++) {
+      res += <IoStarHalfOutline/>;
+    }
+    return res;
+  }
+
   return (
     <section className="container products">
       <h3 style={{ color: "#DC780B" }}>MENU</h3>
@@ -27,9 +59,7 @@ const Products = () => {
                 <p className="product__card__desc">{item.desc}</p>
                 <div className="product__card__rating">
                   <button className="card__btn">+</button>
-                  <div className="rating">
-                    {item.rating} <img src={star} alt="" />
-                  </div>
+                  <div className="rating">{item.rating}</div>
                 </div>
               </div>
             </div>
