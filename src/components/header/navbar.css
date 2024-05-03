@@ -1,0 +1,51 @@
+.navbar,
+.nav__list,
+.nav__left {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav__left {
+  gap: 35px;
+}
+
+.nav__list {
+  gap: 40px;
+  font-size: 20px;
+}
+
+.navbar {
+  padding: 40px 0px;
+}
+
+.hamburger {
+  display: none;
+}
+
+.nav__btns {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+}
+
+@media (max-width: 1050px) {
+  .nav__list {
+    display: none;
+  }
+  .hamburger {
+    display: block;
+    width: 40px;
+    height: 40px;
+  }
+}
+
+.nav__btn:hover {
+  background: white !important;
+  color: #dc780b !important;
+}
+
+.nav__link:hover{
+  transition: 0.3s;
+  color: #dc780b;
+}
